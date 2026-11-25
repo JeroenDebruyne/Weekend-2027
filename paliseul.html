@@ -44,7 +44,7 @@ html{scroll-padding-top:72px}
 .photos{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:6px;margin:20px 0;border-radius:14px;overflow:hidden;aspect-ratio:16/8}
 .photos img{width:100%;height:100%;object-fit:cover;display:block}
 .photos img:first-child{grid-row:1/3}
-.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.facts .t{border-color:var(--blue);border-width:2px}
 .facts div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .facts b{display:block;font-size:13px;color:var(--mute);font-weight:600}
 .facts span{font-size:17px;font-weight:600}
@@ -65,7 +65,7 @@ li{margin:4px 0}
 .yilou{background:var(--warn);color:var(--warnink);padding:10px 14px;border-radius:10px;margin:10px 0 0;font-size:15px}
 .src{font-size:13px;color:var(--mute)}
 footer{color:var(--mute);font-size:14px}
-@media(max-width:700px){.facts,.costs{grid-template-columns:minmax(0,1fr)}.photos{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;aspect-ratio:auto}.photos img:first-child{grid-column:1/3;grid-row:auto;aspect-ratio:16/10}.photos img{aspect-ratio:4/3}}
+@media(max-width:700px){.costs{grid-template-columns:minmax(0,1fr)}.photos{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;aspect-ratio:auto}.photos img:first-child{grid-column:1/3;grid-row:auto;aspect-ratio:16/10}.photos img{aspect-ratio:4/3}}
 @media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:6em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:5.5em;margin-inline-start:-6em;color:var(--mute)}.stack td:empty{display:none}}
 </style><script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script><style>.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.tile{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}.tile img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}.tile span{display:block;padding:12px 14px;font-size:15px}.tile:hover b,.tile:focus-visible b{text-decoration:underline}nav.jump a[aria-current=page]{background:var(--green);color:light-dark(#fff,#10201a);border-color:var(--green)}nav.jump{position:sticky;top:0;z-index:5}.pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;max-width:1100px;margin:0 auto;padding:0 max(5vw,16px) 24px}.pn a{color:var(--green);font-weight:600;min-height:44px;display:inline-flex;align-items:center}</style></head><body><nav class=jump><a href="index.html">Overzicht</a><a href="maredsous-buiten.html">1. Maredsous (omheind buitenzwembad)</a><a href="le-bercail.html">2. Le Bercail (Somme-Leuze)</a><a href="maredsous-binnen.html">3. Maredsous (binnenzwembad)</a><a href="paliseul.html" aria-current=page>4. Paliseul</a><a href="gesves.html">5. Gesves (luxevilla)</a><a href="hastiere.html">6. Hastière (Dinant)</a></nav>
 <section class="house band" id="paliseul">
@@ -76,6 +76,8 @@ footer{color:var(--mute);font-size:14px}
  <div class=photos><img src="img/pal-1.jpg" alt="Paliseul, foto 1" loading="lazy"><img src="img/pal-2.jpg" alt="Paliseul, foto 2" loading="lazy"><img src="img/pal-3.jpg" alt="Paliseul, foto 3" loading="lazy"></div>
  <p class=why><b>Plaats 4 in mijn voorkeur.</b> Indeling past het best, overdekt zwembad met rolluik. Nadeel: duurst en verst rijden.</p>
  <div class=facts>
+  <div class=t><b>Inchecken</b><span>vr 17u tot 18u</span></div>
+  <div class=t><b>Uitchecken</b><span>zo voor 20u</span></div>
   <div><b>Afstand vanaf Ardooie</b><span>246 km, ±2u45 rijden</span></div>
   <div><b>Waarborg</b><span>€800</span></div>
   <div><b>Kinderen samen</b><span>Ja</span></div>
